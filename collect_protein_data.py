@@ -70,7 +70,6 @@ def merge_data(path_paxdb, path_resultsEloE, organism, folderpaxdb_list):
     med = abundance.median(axis = 1, skipna = True)
     #median = median.rename('median')
     med = pd.DataFrame(data = med, columns =['median']) #Теперь будет работать!
-    throw new Error() # работает!
     print(med)
 #    median.columns = pd.MultiIndex.from_frame(median, names = ('abundance', 'median'))
     final_data = pd.merge(final_data, med, how = 'outer', left_on = True)
